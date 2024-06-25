@@ -1,49 +1,77 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>田中さんと松原さん</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <nav>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Delicious Eats</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+      <div class="background-image">
+        <header>
+          <nav>
             <ul>
-                <li><a href="#section1">田中さん</a></li>
-                <li><a href="#section2">松原さん</a></li>
-            </ul>
-        </nav>
+              <li><a href="#home">ホーム</a></li>
+            <li><a href="#about">私たちについて</a></li>
+          <li><a href="#menu">メニュー</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
     </header>
-
-    <section id="section1">
-        <h1>田中さん</h1>
-        <img src="tanaka.jpg" alt="田中さん">
-        <p>田中さんの紹介文です。</p>
-        <button id="openModal1">詳細を見る</button>
+    <section id="home">
+      <h1>Delicious Eatsへようこそ</h1>
+    <p>最高の料理とサービスを提供します。</p>
     </section>
-
-    <section id="section2">
-        <h1>松原さん</h1>
-        <img src="matsubara.jpg" alt="松原さん">
-        <p>松原さんの紹介文です。</p>
-        <button id="openModal2">詳細を見る</button>
+    <section id="about">
+      <h2>私たちについて</h2>
+    <p>Delicious Eatsは、最高の料理とサービスを提供することを目指しています。</p>
+          <img src="about.jpg" alt="私たちについて">
+        </section>
+      <section id="menu">
+        <h2>メニュー</h2>
+          <div class="grid-container">
+            <div class="grid-item">
+              <img src="dish1.jpg" alt="Dish 1">
+            <p>料理1</p>
+          <button class="openModal" data-modal="modal1">詳細を見る</button>
+        </div>
+      <div class="grid-item">
+        <img src="dish2.jpg" alt="Dish 2">
+      <p>料理2</p>
+    <button class="openModal" data-modal="modal2">詳細を見る</button>
+    </div>
+    <div class="grid-item">
+      <img src="dish3.jpg" alt="Dish 3">
+    <p>料理3</p>
+    <button class="openModal" data-modal="modal3">詳細を見る</button>
+    </div>
+    </div>
     </section>
-
+    <section id="contact">
+      <h2>お問い合わせ</h2>
+    <p>ご質問やご予約はお気軽にお問い合わせください。</p>
+    </section>
+    </div>
+    
     <div id="modal1" class="modal">
-        <div class="modal-content">
-            <span class="close" id="closeModal1">&times;</span>
-            <p>田中さんの詳細情報です。</p>
-        </div>
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>料理1の詳細情報です。</p>
+      </div>
     </div>
-
     <div id="modal2" class="modal">
-        <div class="modal-content">
-            <span class="close" id="closeModal2">&times;</span>
-            <p>松原さんの詳細情報です。</p>
-        </div>
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>料理2の詳細情報です。</p>
+      </div>
     </div>
-
-    <script src="script.js"></script>
-</body>
+    <div id="modal3" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>料理3の詳細情報です。</p>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
 </html>

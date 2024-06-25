@@ -10,28 +10,39 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Modal functionality
-  const modals = [
-      { buttonId: 'openModal1', modalId: 'modal1', closeId: 'closeModal1' },
-      { buttonId: 'openModal2', modalId: 'modal2', closeId: 'closeModal2' }
-  ];
+  const openModalButtons = document.querySelectorAll('.openModal');
+  const closeModalButtons = document.querySelectorAll('.close');
+  const modals = document.querySelectorAll('.modal');
 
-  for (const modal of modals) {
-      const openButton = document.getElementById(modal.buttonId);
-      const closeButton = document.getElementById(modal.closeId);
-      const modalElement = document.getElementById(modal.modalId);
-
-      openButton.addEventListener('click', () => {
-          modalElement.style.display = 'block';
+  openModalButtons.forEach(button => {
+      button.addEventListener('click', () => {
+          const modalId = button.getAttribute('data-modal');
+          const modal = document.getElementById(modalId);
+          modal.classList.add('show');
+          setTimeout(() => {
+              modal.style.display = 'block';
+          }, 10);  // 少し遅らせてdisplay:block;を設定
       });
+  });
 
-      closeButton.addEventListener('click', () => {
-          modalElement.style.display = 'none';
+  closeModalButtons.forEach(button => {
+      button.addEventListener('click', () => {
+          const modal = button.closest('.modal');
+          modal.classList.remove('show');
+          setTimeout(() => {
+              modal.style.display = 'none';
+          }, 500);  // トランジションの時間に合わせる
       });
+  });
 
-      window.addEventListener('click', (e) => {
-          if (e.target === modalElement) {
-              modalElement.style.display = 'none';
+  window.addEventListener('click', (e) => {
+      modals.forEach(modal => {
+          if (e.target === modal) {
+              modal.classList.remove('show');
+              setTimeout(() => {
+                  modal.style.display = 'none';
+              }, 500);  // トランジションの時間に合わせる
           }
       });
-  }
+  });
 });
