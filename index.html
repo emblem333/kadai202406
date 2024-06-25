@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>田中さんと松原さん</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#section1">田中さん</a></li>
+                <li><a href="#section2">松原さん</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="section1">
+        <h1>田中さん</h1>
+        <img src="tanaka.jpg" alt="田中さん">
+        <p>田中さんの紹介文です。</p>
+        <button id="openModal1">詳細を見る</button>
+    </section>
+
+    <section id="section2">
+        <h1>松原さん</h1>
+        <img src="matsubara.jpg" alt="松原さん">
+        <p>松原さんの紹介文です。</p>
+        <button id="openModal2">詳細を見る</button>
+    </section>
+
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal1">&times;</span>
+            <p>田中さんの詳細情報です。</p>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal2">&times;</span>
+            <p>松原さんの詳細情報です。</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
