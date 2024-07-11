@@ -4,9 +4,9 @@
   width: auto;
   height: auto;
   background-image: url('./image/background-image.jpg');
-  background-size: cover; /* 画像を要素全体にフィットさせる */
+  background-size: cover; /* 画像を要素全体に */
   background-repeat: no-repeat; /* 画像の繰り返しを防ぐ */
-  background-position: center center; /* 画像を中央に配置する */
+  background-position: center center; /* 画像を中央に */
 }
 
 body {
@@ -50,9 +50,30 @@ section {
   padding: 20px;
 }
 
+.grid-container-footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 10px;
+  padding: 20px;
+}
+
 .grid-item {
   background-color: #f4f4f4;
   padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.grid-item-footer1 {
+  font-family: serif;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.grid-item-footer2 > p,h2 {
+  font-weight: bold;
+  padding: 1px;
   text-align: center;
   border-radius: 5px;
 }
